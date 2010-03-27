@@ -6,8 +6,8 @@
  * All rights reserved.
  */
 /*jslint nomen: false */
-/*global unification, unify_aux */
-var unification =  function () {
+/*global unify_aux */
+var unification = (function () {
 	var _ = 0xBAADF00D;
 
 	function is_array(value) {
@@ -67,8 +67,8 @@ var unification =  function () {
 	}
 
 	function occurs(variable, pattern) {
-		var i;
-		var key;
+		var i,
+			key;
 
 		if (is_variable(pattern) && variable.get_name() === pattern.get_name()) {
 			return true;
@@ -288,4 +288,4 @@ var unification =  function () {
 		variable : variable,
 		_ : _
 	};
-}();
+}());
