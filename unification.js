@@ -1,6 +1,5 @@
-
-/*!
- * JUnify - Unification JavaScript Library v0.23
+/**
+ * @preserve JUnify - Unification JavaScript Library v0.23
  *
  * Licensed under the revised BSD License.
  * Copyright 2008-2009 Bram Stein
