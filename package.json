@@ -11,6 +11,11 @@
   "engines": {
     "node": "*"
   },
+  "scripts": {
+    "test": "vows"
+  },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "vows": "*"
+  }
 }
