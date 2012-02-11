@@ -1,0 +1,16 @@
+{
+  "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
+  "name": "junify",
+  "description": "JavaScript implementation of the unification algorithm",
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bramstein/junify.git"
+  },
+  "main": "lib/unification.js",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
