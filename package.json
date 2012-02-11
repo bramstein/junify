@@ -2,6 +2,7 @@
   "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
   "name": "junify",
   "description": "JavaScript implementation of the unification algorithm",
+  "keywords": ["unification", "junify", "pattern matching", "expression matching"],
   "version": "1.0.1",
   "repository": {
     "type": "git",
