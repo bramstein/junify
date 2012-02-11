@@ -1,6 +1,6 @@
 # JUnify ― JavaScript Unification Library
 
-JUnify is a JavaScript library for performing [unification](http://en.wikipedia.org/wiki/Unification) on objects and arrays. It can be executed by any browser that supports JavaScript version 1.5 and Node.js. Unification is an algorithm to determine the substitutions needed to make two expressions match. If the expressions contain variables, these will need to be bound to values in order for the match to succeed. If two expressions are not identical or the variables can not be bound, the match fails. In the following example unification is used to extract values from a [JSON](http://www.json.org/) object using an pattern object:
+JUnify is a JavaScript library for performing [unification](http://en.wikipedia.org/wiki/Unification) on objects and arrays. It works on both the browser and Node.js. Unification is an algorithm to determine the substitutions needed to make two expressions match. If the expressions contain variables, these will need to be bound to values in order for the match to succeed. If two expressions are not identical or the variables can not be bound, the match fails. In the following example unification is used to extract values from a [JSON](http://www.json.org/) object using an pattern object:
 
     var point = {
         coords: [12, 10, 80], 
@@ -21,9 +21,17 @@ The syntax and use-case in this example is similar to [destructuring assignment 
 * [Pattern matching in JavaScript](../../articles/pattern-matching.html) 
 * [Advanced pattern matching in JavaScript](../../articles/advanced-pattern-matching.html) 
 
+## Installation
+
+Use npm to install `junify`:
+
+    > npm install junify
+
+You can then `require('junify')` and get access to the API explained below.
+
 ## API
 
-All code in the library is contained in the `unification` module. To keep the examples in this section simple, the module name is left out, but it should be present in any real code. The module exposes three public methods and one constant. The two most important methods are `unify` and `variable` .
+All code in the library is contained in the `junify` package. To keep the examples in this section simple, the package name is left out, but it should be present in any real code. The package exposes three public methods and one constant. The two most important methods are `unify` and `variable`.
 
 <dl>
     <dt>unify(pattern1, pattern2)</dt>
@@ -93,10 +101,6 @@ The last method is `visit_pattern`, which is used to traverse a pattern using a 
 An example of using the `visit_pattern` method can be found in [the article on extracting values from JavaScript objects](../../articles/extracting-object-values.html), where it is used to implement a simplified syntax for extracting object properties.
 
 ## Example
-
-First include the JUnify library in your web page by adding a `script` element to the head element. For production use it is recommend to use a minified version of JUnify.
-
-    <script type="text/javascript" src="scripts/unification.min.js"></script>
 
 In this example we set up some variable names for convenience (you can also use the fully qualified names without any problems―I would actually recommend it.) Remember that the wildcard constant `_` must be an underscore. The methods can be renamed freely. We also create a function to display the results. If the unification succeeds this function will display all the variables and their bindings, or if the unification fails, display an error message.
 
