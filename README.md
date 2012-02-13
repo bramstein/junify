@@ -50,7 +50,7 @@ Both the unify and variable methods were demonstrated in the introduction. Note 
 
 Variable names can however occur only once per pattern; they must be unique.
 
-JUnify can only perform unification on objects and arrays, not on atoms. The following types are considered atoms: `Boolean`, `Number`, `String`, `NaN`, `Infinity`, `undefined` and `null`. Functions are not considered atoms, nor can they be unified. Variables can also be typed, so they only match if the types are identical in both patterns.
+JUnify can only perform unification on objects and arrays, not on atoms. The following types are considered atoms: `Boolean`, `Number`, `String`, `Function`, `NaN`, `Infinity`, `undefined` and `null`. Variables can also be typed, so they only match if the types are identical in both patterns.
 
     var a = new Date();
     var b = new Boolean(true);
