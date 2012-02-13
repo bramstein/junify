@@ -23,6 +23,13 @@ vows.describe('Junify').addBatch({
             assert.ok(!u({hello: 'world', key: 'value'}, {hello: 'world'}));
             assert.ok(!u({hello: 'world'}, {hello: 'world', key: 'value'}));
         },
+        'function': function(u) {
+            var f = function() {},
+                g = function() {};
+
+            assert.ok(u(f, f));
+            assert.ok(!u(f, g));
+        },
         'variable': function (u) {
             assert.equal(u($('a'), 1).a, 1);
             assert.equal(u(1, $('a')).a, 1);
@@ -37,6 +44,7 @@ vows.describe('Junify').addBatch({
         'type': function (u) {
             assert.ok(u($('d', Date), new Date()));
             assert.ok(u($('d', String), 'hello'));
+            assert.ok(u($('d', Function), function() {}));
             assert.ok(u(String, _));
         },
         'wildcard': function (u) {
