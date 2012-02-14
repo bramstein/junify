@@ -13,24 +13,26 @@ vows.describe('Junify').addBatch({
         'array': function (u) {
             assert.ok(u([], []));
             assert.ok(u([1],[1]));
-            assert.ok(!u([1],[2]));
+            assert.isFalse(u([1],[2]));
+            assert.isFalse(u([], [1, 2, 3]));
+            assert.isFalse(u([1], [1, 2, 3]));
             assert.ok(u([1, [3, 4], 5], [1, [3, 4], 5]));
         },
         'object': function (u) {
             assert.ok(u({}, {}));
             assert.ok(u({hello: 'world'}, {hello: 'world'}));
             assert.ok(u({hello: 'world', key: 'value'}, {key: 'value', hello: 'world'}));
-            assert.ok(!u({hello: 'world', key: 'value'}, {hello: 'world'}));
-            assert.ok(!u({hello: 'world'}, {hello: 'world', key: 'value'}));
+            assert.isFalse(u({hello: 'world', key: 'value'}, {hello: 'world'}));
+            assert.isFalse(u({hello: 'world'}, {hello: 'world', key: 'value'}));
         },
         'variable': function (u) {
             assert.equal(u($('a'), 1).a, 1);
             assert.equal(u(1, $('a')).a, 1);
             assert.equal(u({hello: $('a')}, {hello: 'world'}).a, 'world');
 
-            assert.ok(!u([$('a'), $('a')], [1, 2]));
-            assert.ok(!u($('a'), $('a')));
-            assert.ok(!u([$('a'), 2], [1, $('a')]));
+            assert.isFalse(u([$('a'), $('a')], [1, 2]));
+            assert.isFalse(u($('a'), $('a')));
+            assert.isFalse(u([$('a'), 2], [1, $('a')]));
             assert.equal(u([[$('a')],$('b')], [[1],2]).a, 1);
             assert.equal(u($('n'), function () { return 10; }()).n, 10);
         },
@@ -54,8 +56,8 @@ vows.describe('Junify').addBatch({
         },
         'wildcard object': function (u) {
             assert.ok(u({_ : _}, {_ : _}));
-            assert.ok(!u({_ : _}, {}));
-            assert.ok(!u({}, {_ : _}));
+            assert.isFalse(u({_ : _}, {}));
+            assert.isFalse(u({}, {_ : _}));
 
             assert.ok(u(_, {hello: 'world'}));
             assert.ok(u({hello: 'world'}, _));
