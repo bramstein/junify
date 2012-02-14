@@ -30,7 +30,7 @@ vows.describe('Junify').addBatch({
                 g = function() {};
 
             assert.ok(u(f, f));
-            assert.ok(!u(f, g));
+            assert.isFalse(u(f, g));
         },
         'variable': function (u) {
             assert.equal(u($('a'), 1).a, 1);
