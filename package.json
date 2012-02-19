@@ -3,7 +3,7 @@
   "name": "junify",
   "description": "JavaScript implementation of the unification algorithm",
   "keywords": ["unification", "junify", "pattern matching", "expression matching"],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/bramstein/junify.git"
