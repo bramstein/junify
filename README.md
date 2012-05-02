@@ -1,4 +1,4 @@
-# JUnify ― JavaScript Unification Library
+## JUnify ― JavaScript Unification Library
 
 JUnify is a JavaScript library for performing [unification](http://en.wikipedia.org/wiki/Unification) on objects and arrays. It works on both the browser and Node.js. Unification is an algorithm to determine the substitutions needed to make two expressions match. If the expressions contain variables, these will need to be bound to values in order for the match to succeed. If two expressions are not identical or the variables can not be bound, the match fails. In the following example unification is used to extract values from a [JSON](http://www.json.org/) object using an pattern object:
 
