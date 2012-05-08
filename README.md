@@ -17,9 +17,9 @@ JUnify is a JavaScript library for performing [unification](http://en.wikipedia.
 
 The syntax and use-case in this example is similar to [destructuring assignment in JavaScript 1.7](http://developer.mozilla.org/en/docs/New_in_JavaScript_1.7#Destructuring_assignment). Its use is however not limited to extracting fields. Unification can, for example, also be used to implement pattern matching or an expert system (Artificial Intelligence, Structures and Strategies for Complex Problem Solving, by George F. Luger. Addison Wesley, ISBN: 0-201-64866-0, page 68.) The following articles give some examples of the features that could be implemented using the JUnify library.
 
-* [Extracting values from JavaScript objects](../../articles/extracting-object-values.html) 
-* [Pattern matching in JavaScript](../../articles/pattern-matching.html) 
-* [Advanced pattern matching in JavaScript](../../articles/advanced-pattern-matching.html) 
+* [Extracting values from JavaScript objects](../../writing/extracting-object-values.html) 
+* [Pattern matching in JavaScript](../../writing/pattern-matching.html) 
+* [Advanced pattern matching in JavaScript](../../writing/advanced-pattern-matching.html) 
 
 ## Installation
 
@@ -98,7 +98,7 @@ The last method is `visit_pattern`, which is used to traverse a pattern using a 
     </dl></dd>
 </dl>
 
-An example of using the `visit_pattern` method can be found in [the article on extracting values from JavaScript objects](../../articles/extracting-object-values.html), where it is used to implement a simplified syntax for extracting object properties.
+An example of using the `visit_pattern` method can be found in [the article on extracting values from JavaScript objects](../../writing/extracting-object-values.html), where it is used to implement a simplified syntax for extracting object properties.
 
 ## Example
 
